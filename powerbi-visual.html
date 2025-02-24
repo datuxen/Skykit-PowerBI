@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vertical Power BI Reports</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .powerbi-iframe {
+        width: 100%;       /* Adjust to your desired width */
+        max-width: 800px;  /* Optional maximum width */
+        height: 600px;     /* Adjust height as needed */
+        border: none;
+        margin: 10px 0;    /* Adds vertical spacing between reports */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Top Report -->
+      <iframe 
+        class="powerbi-iframe" 
+        src="https://app.powerbi.com/view?r=eyJrIjoiODM1YTA5YTItMjQwOS00YzgxLWIyNzAtNTYyMjU0MTJlMjI1IiwidCI6ImE4NzFmZGNhLTIyYWYtNGRkZC1iOTAyLWYzODEwNDFkZWFhMyJ9" 
+        title="Top Report" 
+        allowFullScreen="true">
+      </iframe>
+      <!-- Bottom Report -->
+      <iframe 
+        class="powerbi-iframe" 
+        src="https://app.powerbi.com/view?r=eyJrIjoiN2M0MjkyNTUtODljYi00NjEyLWE4NzEtM2JjYjAxZWFjMjBhIiwidCI6ImE4NzFmZGNhLTIyYWYtNGRkZC1iOTAyLWYzODEwNDFkZWFhMyJ9" 
+        title="Bottom Report" 
+        allowFullScreen="true">
+      </iframe>
+    </div>
+  </body>
+</html>
