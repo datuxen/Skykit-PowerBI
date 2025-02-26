@@ -3,36 +3,61 @@
   <head>
     <title>Vertical Power BI Reports</title>
     <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
       .container {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        height: 100vh; /* Full viewport height */
       }
       .powerbi-iframe {
-        width: 100%;       /* Adjust to your desired width */
-        max-width: 800px;  /* Optional maximum width */
-        height: 600px;     /* Adjust height as needed */
+        width: 100%;
+        height: 50vh; /* Each iframe takes half of the viewport height */
         border: none;
-        margin: 10px 0;    /* Adds vertical spacing between reports */
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <!-- Top Report -->
+      <!-- Top Report with reduced chrome -->
       <iframe 
         class="powerbi-iframe" 
-        src="https://app.powerbi.com/view?r=eyJrIjoiODM1YTA5YTItMjQwOS00YzgxLWIyNzAtNTYyMjU0MTJlMjI1IiwidCI6ImE4NzFmZGNhLTIyYWYtNGRkZC1iOTAyLWYzODEwNDFkZWFhMyJ9" 
-        title="Top Report" 
+        src="https://app.powerbi.com/view?r=eyJrIjoiODM1YTA5YTItMjQwOS00YzgxLWIyNzAtNTYyMjU0MTJlMjI1IiwidCI6ImE4NzFmZGNhLTIyYWYtNGRkZC1iOTAyLWYzODEwNDFkZWFhMyJ9&chrome=0" 
+        title="LZR-4 Productivity" 
         allowFullScreen="true">
       </iframe>
-      <!-- Bottom Report -->
+      <!-- Bottom Report with reduced chrome -->
       <iframe 
         class="powerbi-iframe" 
-        src="https://app.powerbi.com/view?r=eyJrIjoiN2M0MjkyNTUtODljYi00NjEyLWE4NzEtM2JjYjAxZWFjMjBhIiwidCI6ImE4NzFmZGNhLTIyYWYtNGRkZC1iOTAyLWYzODEwNDFkZWFhMyJ9" 
-        title="Bottom Report" 
+        src="https://app.powerbi.com/view?r=eyJrIjoiN2M0MjkyNTUtODljYi00NjEyLWE4NzEtM2JjYjAxZWFjMjBhIiwidCI6ImE4NzFmZGNhLTIyYWYtNGRkZC1iOTAyLWYzODEwNDFkZWFhMyJ9&chrome=0" 
+        title="LZR-4 SAP Productivity" 
         allowFullScreen="true">
       </iframe>
     </div>
+    
+    <script>
+      // Set refresh interval for every 24 hours (in milliseconds)
+      var refreshInterval = 24 * 60 * 60 * 1000; // 86400000 ms
+
+      function refreshReports() {
+        // Get both iframe elements by title
+        var topIframe = document.querySelector('iframe[title="Top Report"]');
+        var bottomIframe = document.querySelector('iframe[title="Bottom Report"]');
+        
+        // Refresh by resetting the src attribute
+        if (topIframe) {
+          topIframe.src = topIframe.src;
+        }
+        if (bottomIframe) {
+          bottomIframe.src = bottomIframe.src;
+        }
+      }
+
+      // Set the interval to refresh the reports every 24 hours
+      setInterval(refreshReports, refreshInterval);
+    </script>
   </body>
 </html>
