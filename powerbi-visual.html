@@ -11,12 +11,15 @@
       .container {
         display: flex;
         flex-direction: column;
-        height: 100vh; /* Full viewport height */
+        align-items: center;
+        height: 100vh; /*space at the top to move the plot down */
+        padding-top: 5vh; /* Full viewport height */
       }
       .powerbi-iframe {
         width: 100%;
-        height: 50vh; /* Each iframe takes half of the viewport height */
+        height: 60vh; /* Each iframe takes half of the viewport height */
         border: none;
+        margin-bottom: 10px;
       }
     </style>
   </head>
@@ -44,8 +47,8 @@
 
       function refreshReports() {
         // Get both iframe elements by title
-        var topIframe = document.querySelector('iframe[title="Top Report"]');
-        var bottomIframe = document.querySelector('iframe[title="Bottom Report"]');
+        var topIframe = document.querySelector('iframe[title="LZR-4 Productivity"]');
+        var bottomIframe = document.querySelector('iframe[title="LZR-4 SAP Productivity"]');
         
         // Refresh by resetting the src attribute
         if (topIframe) {
