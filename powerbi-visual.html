@@ -16,17 +16,18 @@
         align-items: center;
         height: 100vh; /*space at the top to move the plot down */
         padding-top: 2vh; /* Full viewport height */
-        width: 100vw; /*full viewport width */
+        width: 1900px; /*full viewport width */
+        margin: 0 auto;
+        padding-top: 2vh;
         box-sizing: border-box; /* include padding in width calculations */
       }
       .powerbi-iframe {
         display: block;
         margin: 0 auto 10px auto; /*top 0 bottom 10 px left/right auto */
-        width: 100%;
-        max-width: 1900px;
+        width: 1900px;
         height: 60vh; /* Each iframe takes half of the viewport height */
         border: none;
-        /*margin-bottom: 10px;*/
+        margin: 0 auto 10 px auto;
         box-sizing: border-box;
         /* transform: translateX(-0.05%); */
       }
@@ -37,14 +38,14 @@
       <!-- Top Report with reduced chrome -->
       <iframe 
         class="powerbi-iframe" 
-        src="https://app.powerbi.com/view?r=eyJrIjoiODM1YTA5YTItMjQwOS00YzgxLWIyNzAtNTYyMjU0MTJlMjI1IiwidCI6ImE4NzFmZGNhLTIyYWYtNGRkZC1iOTAyLWYzODEwNDFkZWFhMyJ9&chrome=0&pageView=fitToWidth" 
+        src="https://app.powerbi.com/view?r=eyJrIjoiODM1YTA5YTItMjQwOS00YzgxLWIyNzAtNTYyMjU0MTJlMjI1IiwidCI6ImE4NzFmZGNhLTIyYWYtNGRkZC1iOTAyLWYzODEwNDFkZWFhMyJ9&chrome=0" 
         title="LZR-4 Productivity" 
         allowFullScreen="true">
       </iframe>
       <!-- Bottom Report with reduced chrome -->
       <iframe 
         class="powerbi-iframe" 
-        src="https://app.powerbi.com/view?r=eyJrIjoiN2M0MjkyNTUtODljYi00NjEyLWE4NzEtM2JjYjAxZWFjMjBhIiwidCI6ImE4NzFmZGNhLTIyYWYtNGRkZC1iOTAyLWYzODEwNDFkZWFhMyJ9&chrome=0&pageView=fitToWidth" 
+        src="https://app.powerbi.com/view?r=eyJrIjoiN2M0MjkyNTUtODljYi00NjEyLWE4NzEtM2JjYjAxZWFjMjBhIiwidCI6ImE4NzFmZGNhLTIyYWYtNGRkZC1iOTAyLWYzODEwNDFkZWFhMyJ9&chrome=0" 
         title="LZR-4 SAP Productivity" 
         allowFullScreen="true">
       </iframe>
